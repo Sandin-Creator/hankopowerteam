@@ -9,25 +9,37 @@
 </head>
 
 <body>
-<!-- ================= Header ================= -->
-<header class="site">
-  <div class="container nav">
-    <div class="brand">
+  <!-- ================= Header ================= -->
+  <header class="site">
+    <div class="container nav">
+      <div class="brand">
         <img src="/img/hptr.jpg" alt="Hangö Powerteam Logo" class="brand-logo" />
-      <span class="brand-text">HANGÖ POWERTEAM</span>
+        <span class="brand-text">HANGÖ POWERTEAM</span>
+      </div>
+
+      <nav class="links" aria-label="Main navigation">
+        <a href="#about"        data-i18n="nav.about">About</a>
+        <a href="#memberships"  data-i18n="nav.memberships">Memberships</a>
+        <a href="#instagram"    data-i18n="nav.instagram">Instagram</a>
+        <a href="#contact"      data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <!-- Language switcher -->
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang" data-lang="en" aria-label="English">
+          <img src="/img/flags/en.png" alt="" class="flag" />
+        </button>
+        <button class="lang" data-lang="sv" aria-label="Svenska">
+          <img src="/img/flags/sv.png" alt="" class="flag" />
+        </button>
+        <button class="lang" data-lang="fi" aria-label="Suomi">
+          <img src="/img/flags/fi.png" alt="" class="flag" />
+        </button>
+      </div>
+
+      <a class="btn" href="#memberships" data-i18n="cta.join">Join Now</a>
     </div>
-
-    <nav class="links" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#memberships">Memberships</a>
-      <a href="#instagram">Instagram</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <a class="btn" href="#memberships">Join Now</a>
-  </div>
-</header>
-
+  </header>
 
   <!-- ================= Hero ================= -->
   <section id="hero" class="hero">
@@ -38,12 +50,14 @@
 
     <!-- Overlay content (single block) -->
     <div class="container hero-content">
-      <p class="kicker">Professional Powerlifting • Competition Prep</p>
-      <h1 class="title">Push Your Limits</h1>
-      <p class="subtitle">Elite coaching, calibrated plates, competition racks, and a community built for lifters chasing PRs.</p>
+      <p class="kicker"  data-i18n="hero.kicker">Professional Powerlifting • Competition Prep</p>
+      <h1 class="title"  data-i18n="hero.title">Push Your Limits</h1>
+      <p class="subtitle" data-i18n="hero.subtitle">
+        Elite coaching, calibrated plates, competition racks, and a community built for lifters chasing PRs.
+      </p>
       <div class="cta-row">
-        <a class="btn primary" href="#memberships">Become a member</a>
-        <a class="btn ghost" href="#instagram">See our training vibe</a>
+        <a class="btn primary" href="#memberships" data-i18n="hero.become">Become a member</a>
+        <a class="btn ghost"   href="#instagram"   data-i18n="hero.vibe">See our training vibe</a>
       </div>
     </div>
   </section>
@@ -51,94 +65,98 @@
   <!-- ================= About ================= -->
   <section id="about">
     <div class="container">
-      <h2 class="section-title">About Hangö Powerteam</h2>
-      <p class="lead">We are a specialist powerlifting gym focused on meet prep and strength progress. Access IPF-style equipment, experienced coaches, and a serious—but friendly—training environment.</p>
+      <h2 class="section-title" data-i18n="about.title">About Hangö Powerteam</h2>
+      <p class="lead" data-i18n="about.lead">
+        We are a specialist powerlifting gym focused on meet prep and strength progress. Access IPF-style equipment,
+        experienced coaches, and a serious—but friendly—training environment.
+      </p>
 
       <div class="about">
         <div class="panel">
-          <h3>Facilities</h3>
+          <h3 data-i18n="about.facilities">Facilities</h3>
           <ul class="clean">
-            <li>Competition combo racks, calibrated plates, deadlift platforms</li>
-            <li>Belt squat, specialty bars (SSB, Duffalo, Buffalo)</li>
-            <li>Chalk & ammonia allowed; proper bar care</li>
-            <li>Competition simulations and attempt selection help</li>
+            <li data-i18n="about.li1">Competition combo racks, calibrated plates, deadlift platforms</li>
+            <li data-i18n="about.li2">Belt squat, specialty bars (SSB, Duffalo, Buffalo)</li>
+            <li data-i18n="about.li3">Chalk & ammonia allowed; proper bar care</li>
+            <li data-i18n="about.li4">Competition simulations and attempt selection help</li>
           </ul>
         </div>
 
-        <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1200&auto=format&fit=crop" 
+        <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1200&auto=format&fit=crop"
              alt="Powerlifting gym equipment" loading="lazy">
       </div>
     </div>
   </section>
 
   <!-- ================= Memberships ================= -->
-    <section id="memberships">
+  <section id="memberships">
     <div class="container">
-        <h2 class="section-title">Memberships</h2>
+      <h2 class="section-title" data-i18n="plans.title">Memberships</h2>
 
-        <div class="cards">
+      <div class="cards">
         <div class="card">
-            <div class="badge">Popular</div>
-            <h3>12 Months</h3>
-            <div class="price">200€</div>
-            <ul class="clean">
-            <li>Best value</li>
-            <li>24/7 gym access</li>
-            <li>Powerlifting community support</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h3>6 Months</h3>
-            <div class="price">120€</div>
-            <ul class="clean">
-            <li>24/7 gym access</li>
-            <li>Competition equipment</li>
-            <li>Community & events</li>
-            </ul>
+          <div class="badge" data-i18n="plans.popular">Popular</div>
+          <h3><span data-i18n="plans.12m">12 Months</span></h3>
+          <div class="price">200€</div>
+          <ul class="clean">
+            <li data-i18n="plans.best">Best value</li>
+            <li data-i18n="plans.247">24/7 gym access</li>
+            <li data-i18n="plans.community">Powerlifting community support</li>
+          </ul>
         </div>
 
         <div class="card">
-            <h3>3 Months</h3>
-            <div class="price">70€</div>
-            <ul class="clean">
-            <li>Short-term commitment</li>
-            <li>24/7 gym access</li>
-            <li>Competition equipment</li>
-            </ul>
+          <h3><span data-i18n="plans.6m">6 Months</span></h3>
+          <div class="price">120€</div>
+          <ul class="clean">
+            <li data-i18n="plans.247">24/7 gym access</li>
+            <li data-i18n="plans.equip">Competition equipment</li>
+            <li data-i18n="plans.events">Community & events</li>
+          </ul>
         </div>
 
         <div class="card">
-            <h3>1 Month</h3>
-            <div class="price">30€</div>
-            <ul class="clean">
-            <li>Try us out for a month</li>
-            <li>24/7 gym access</li>
-            </ul>
+          <h3><span data-i18n="plans.3m">3 Months</span></h3>
+          <div class="price">70€</div>
+          <ul class="clean">
+            <li data-i18n="plans.short">Short-term commitment</li>
+            <li data-i18n="plans.247">24/7 gym access</li>
+            <li data-i18n="plans.equip">Competition equipment</li>
+          </ul>
         </div>
 
         <div class="card">
-            <h3>1-Time Visit</h3>
-            <div class="price">5€</div>
-            <ul class="clean">
-            <li>Day pass</li>
-            <li>Full access to gym facilities</li>
-            </ul>
+          <h3><span data-i18n="plans.1m">1 Month</span></h3>
+          <div class="price">30€</div>
+          <ul class="clean">
+            <li data-i18n="plans.try">Try us out for a month</li>
+            <li data-i18n="plans.247">24/7 gym access</li>
+          </ul>
         </div>
+
+        <div class="card">
+          <h3><span data-i18n="plans.dropin">1-Time Visit</span></h3>
+          <div class="price">5€</div>
+          <ul class="clean">
+            <li data-i18n="plans.daypass">Day pass</li>
+            <li data-i18n="plans.full">Full access to gym facilities</li>
+          </ul>
         </div>
+      </div>
     </div>
-    </section>
-
+  </section>
 
   <!-- ================= Training Environment ================= -->
   <section id="training">
     <div class="container">
-      <h2 class="section-title">Training Environment</h2>
-      <p class="lead">Our gym is open 24/7 for members. No scheduled classes — just a serious training space for lifters who want to focus.</p>
+      <h2 class="section-title" data-i18n="training.title">Training Environment</h2>
+      <p class="lead" data-i18n="training.lead">
+        Our gym is open 24/7 for members. No scheduled classes — just a serious training space for lifters who want to focus.
+      </p>
       <ul class="clean">
-        <li>Always competition-ready racks and calibrated plates</li>
-        <li>Community of lifters who push each other</li>
-        <li>Bring your coach or train solo — your choice</li>
+        <li data-i18n="training.li1">Always competition-ready racks and calibrated plates</li>
+        <li data-i18n="training.li2">Community of lifters who push each other</li>
+        <li data-i18n="training.li3">Bring your coach or train solo — your choice</li>
       </ul>
     </div>
   </section>
@@ -146,8 +164,8 @@
   <!-- ================= Instagram ================= -->
   <section id="instagram">
     <div class="container">
-      <h2 class="section-title">Instagram</h2>
-      <p class="lead">@hangöpowerteam • latest posts</p>
+      <h2 class="section-title" data-i18n="ig.title">Instagram</h2>
+      <p class="lead" data-i18n="ig.lead">@hangöpowerteam • latest posts</p>
 
       <div id="ig-grid" class="ig-grid" aria-live="polite">
         <!-- Skeleton loaders -->
@@ -156,7 +174,7 @@
       </div>
 
       <div class="ig-cta">
-        <a href="https://instagram.com/hankopowerteam" target="_blank" rel="noopener">
+        <a href="https://instagram.com/hankopowerteam" target="_blank" rel="noopener" data-i18n="ig.view">
           View on Instagram →
         </a>
       </div>
@@ -166,13 +184,15 @@
   <!-- ================= Contact ================= -->
   <section id="contact">
     <div class="container">
-      <h2 class="section-title">Find Us</h2>
+      <h2 class="section-title" data-i18n="contact.title">Find Us</h2>
 
       <div class="about">
         <div class="panel">
-          <h3>Hangö Powerteam</h3>
-          <p class="lead">Serious training for serious lifters. Drop us a DM on Instagram or swing by for a trial session.</p>
-          <p>Email: <a href="mailto:info@hankopowerteam.fi">info@hangöpowerteam.fi</a></p>
+          <h3 data-i18n="contact.h3">Hangö Powerteam</h3>
+          <p class="lead" data-i18n="contact.lead">
+            Serious training for serious lifters. Drop us a DM on Instagram or swing by for a trial session.
+          </p>
+          <p><span data-i18n="contact.email">Email:</span> <a href="mailto:info@hankopowerteam.fi">info@hankopowerteam.fi</a></p>
         </div>
 
         <!-- Google Maps Embed -->
@@ -189,64 +209,62 @@
     </div>
   </section>
 
-    <!-- ================= Sponsors ================= -->
-    <section id="sponsors" aria-label="Sponsors">
+  <!-- ================= Sponsors ================= -->
+  <section id="sponsors" aria-label="Sponsors">
     <div class="container sponsor-pane">
-
-        <!-- Main sponsor (always visible, floating above ticker) -->
-        <div class="sponsor-main-overlay">
+      <!-- Main sponsor (always visible, floating above ticker) -->
+      <div class="sponsor-main-overlay">
         <a href="https://mainsponsor.example" target="_blank" rel="noopener">
-            <img src="/img/sponsors/mainsponsor.webp" alt="Main Sponsor" loading="lazy">
+          <img src="/img/sponsors/mainsponsor.webp" alt="Main Sponsor" loading="lazy">
         </a>
-        </div>
+      </div>
 
-        <!-- Sliding sponsors -->
-        <div class="sponsor-ticker" aria-live="off">
+      <!-- Sliding sponsors -->
+      <div class="sponsor-ticker" aria-live="off">
         <div class="sponsor-track">
-            <!-- First set -->
-            <a class="sponsor" href="#"><img src="/img/sponsors/adven.jpg" alt="Sponsor 1" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/euromaster.png" alt="Sponsor 2" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/forcit.jpg" alt="Sponsor 3" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/portofhanko.png" alt="Sponsor 4" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/teamsportia.jpg" alt="Sponsor 5" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/vapaasatama.webp" alt="Sponsor 6" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/benitec.png" alt="Sponsor 7" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/euromaster.png" alt="Sponsor 8" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/hangöbil.jpg" alt="Sponsor 9" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/mardos.jpg" alt="Sponsor 10" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/portofhanko.png" alt="Sponsor 11" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/petras.png" alt="Sponsor 12" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/supermarket.png" alt="Sponsor 13" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/vapaasatama.webp" alt="Sponsor 14" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/visko.png" alt="Sponsor 15" loading="lazy"></a>
+          <!-- (Your sponsors list unchanged) -->
+          <a class="sponsor" href="#"><img src="/img/sponsors/adven.jpg" alt="Sponsor 1" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/euromaster.png" alt="Sponsor 2" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/forcit.jpg" alt="Sponsor 3" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/portofhanko.png" alt="Sponsor 4" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/teamsportia.jpg" alt="Sponsor 5" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/vapaasatama.webp" alt="Sponsor 6" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/benitec.png" alt="Sponsor 7" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/euromaster.png" alt="Sponsor 8" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/hangöbil.jpg" alt="Sponsor 9" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/mardos.jpg" alt="Sponsor 10" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/portofhanko.png" alt="Sponsor 11" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/petras.png" alt="Sponsor 12" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/supermarket.png" alt="Sponsor 13" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/vapaasatama.webp" alt="Sponsor 14" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/visko.png" alt="Sponsor 15" loading="lazy"></a>
 
-            <!-- Duplicate set for seamless loop -->
-            <a class="sponsor" href="#"><img src="/img/sponsors/adven.jpg" alt="Sponsor 1" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/euromaster.png" alt="Sponsor 2" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/forcit.jpg" alt="Sponsor 3" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/portofhanko.png" alt="Sponsor 4" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/teamsportia.jpg" alt="Sponsor 5" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/vapaasatama.webp" alt="Sponsor 6" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/benitec.png" alt="Sponsor 7" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/euromaster.png" alt="Sponsor 8" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/hangöbil.jpg" alt="Sponsor 9" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/mardos.jpg" alt="Sponsor 10" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/portofhanko.png" alt="Sponsor 11" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/petras.png" alt="Sponsor 12" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/supermarket.png" alt="Sponsor 13" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/vapaasatama.webp" alt="Sponsor 14" loading="lazy"></a>
-            <a class="sponsor" href="#"><img src="/img/sponsors/visko.png" alt="Sponsor 15" loading="lazy"></a>
+          <!-- Duplicate for seamless loop -->
+          <a class="sponsor" href="#"><img src="/img/sponsors/adven.jpg" alt="Sponsor 1" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/euromaster.png" alt="Sponsor 2" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/forcit.jpg" alt="Sponsor 3" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/portofhanko.png" alt="Sponsor 4" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/teamsportia.jpg" alt="Sponsor 5" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/vapaasatama.webp" alt="Sponsor 6" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/benitec.png" alt="Sponsor 7" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/euromaster.png" alt="Sponsor 8" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/hangöbil.jpg" alt="Sponsor 9" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/mardos.jpg" alt="Sponsor 10" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/portofhanko.png" alt="Sponsor 11" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/petras.png" alt="Sponsor 12" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/supermarket.png" alt="Sponsor 13" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/vapaasatama.webp" alt="Sponsor 14" loading="lazy"></a>
+          <a class="sponsor" href="#"><img src="/img/sponsors/visko.png" alt="Sponsor 15" loading="lazy"></a>
         </div>
-        </div>
+      </div>
 
     </div>
-    </section>
-
+  </section>
 
   <!-- ================= Footer ================= -->
   <footer>
     <div class="container">
-      © <span id="y"></span> Hangö Powerteam • Lift heavy. Be kind.
+      © <span id="y"></span> Hangö Powerteam • <span data-i18n="footer.motto">Lift heavy. Be kind.</span>
     </div>
   </footer>
 

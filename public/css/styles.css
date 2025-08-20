@@ -74,6 +74,58 @@ html {
    HEADER + NAVIGATION
    ========================================================= */
 
+/* ===== Language switcher (smaller rounded flags) ===== */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;  /* tighter spacing */
+  margin-left: 10px;
+}
+
+.lang {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Flags: smaller, rounded corners */
+.flag {
+  display: block;
+  width: auto;
+  height: 18px;   /* smaller than before */
+  border-radius: 4px; /* subtle rounded edges */
+  object-fit: cover;
+  transition: transform .15s ease, box-shadow .15s ease, outline .15s ease;
+}
+
+/* Hover: slight lift */
+.lang:hover .flag {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+}
+
+/* Active (chosen one): accent border + glow */
+.lang.active .flag {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  box-shadow: 0 0 6px rgba(230,57,70,.45);
+  transform: none;
+}
+
+/* Compact on phones */
+@media (max-width: 640px) {
+  .flag { height: 16px; border-radius: 3px; }
+}
+
+
+
+
+
+/* Brand */
+
 .brand {
   display: inline-flex;
   align-items: center;
