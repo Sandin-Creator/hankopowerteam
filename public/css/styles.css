@@ -461,7 +461,7 @@ ul.clean { padding-left: 18px; margin: 10px 0 0; }
 .sponsor {
   display: inline-flex; align-items: center; justify-content: center;
   height: 52px; min-width: 120px; padding: 0 8px;
-  filter: grayscale(100%) brightness(0.9);
+  filter: none;
   opacity: 0.9;
   transition: filter .2s ease, opacity .2s ease, transform .2s ease;
 }
