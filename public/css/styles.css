@@ -51,9 +51,51 @@ a:focus-visible, button:focus-visible {
   * { animation: none !important; transition: none !important; }
 }
 
+/* ===== Sticky header offset for in-page anchors ===== */
+:root {
+  --header-h: 60px; 
+}
+
+html {
+  scroll-padding-top: var(--header-h);
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: var(--header-h);
+}
+
+@media (max-width: 860px) {
+  :root { --header-h: 80px; } /* slightly smaller on mobile */
+}
+
+
 /* =========================================================
    HEADER + NAVIGATION
    ========================================================= */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* space between text and logo */
+}
+
+.brand-text {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+.brand-logo {
+  height: 90px;      /* increase logo size */
+  width: 90px;       /* keep square */
+  object-fit: contain;
+  border-radius: 50%; /* makes it a circle (optional) */
+  background: transparent; /* no extra box if PNG has transparency */
+}
+
+   
 header.site {
   position: sticky; top: 0; z-index: 50;
   background: rgba(10, 11, 14, .65);
@@ -375,6 +417,13 @@ ul.clean { padding-left: 18px; margin: 10px 0 0; }
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+
+@media (max-width: 600px) {
+  .ig-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 /* =========================================================
    MAP EMBED
